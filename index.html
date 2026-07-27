@@ -732,14 +732,13 @@
       background: #eef2f7;
     }
 
-    @media (max-width: 900px) {
+      @media (max-width: 900px) {
       .nav { display: none; }
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
       .hero-panel { display: none; }
       .stats {grid-template-columns: repeat(2, 1fr);}
       .stat {border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);}
       .stat:nth-child(2n) {border-right: 0;}
-      grid-template-columns: 1fr;
       .company-grid { grid-template-columns: 1fr; }
     }
 
@@ -753,7 +752,6 @@
       .stat { padding: 19px 16px; }
       .section { padding-top: 62px; }
       .section-head { align-items: flex-start; flex-direction: column; }
-      grid-template-columns: 1fr;
       .company-grid { grid-template-columns: 1fr; }
       .info-grid, .product-list { grid-template-columns: 1fr; }
       .detail-hero, .detail-content { padding-left: 22px; padding-right: 22px; }
