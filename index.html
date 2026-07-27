@@ -478,8 +478,8 @@
 
     .card-actions {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       margin-top: auto;
       padding-top: 18px;
     }
@@ -498,14 +498,20 @@
     }
 
     .btn.primary {
-      color: white;
-      background: var(--navy);
+  background: #eef4ff;
+  color: var(--navy);
+  border: 1px solid #d7e4ff;
     }
 
     .btn.ghost {
       min-width: 42px;
       color: var(--navy);
       background: #f1f5fa;
+    }
+
+    .btn.apply {
+      background: var(--navy);
+      color: #fff;
     }
 
     .empty {
@@ -732,7 +738,7 @@
       background: #eef2f7;
     }
 
-      @media (max-width: 900px) {
+    @media (max-width: 900px) {
       .nav { display: none; }
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
       .hero-panel { display: none; }
@@ -913,6 +919,7 @@
             <div class="category">${company.category || ""}</div>
             <h3 class="company-name">${company.products.map(product => `• ${product.name}`).join("<br>")}</h3>
             <div class="card-actions">
+              ${company.meetingRequest? `<a class="btn apply" href="${company.meetingRequest}"target="_blank"rel="noopener noreferrer">预约洽谈</a>`: ""}
               <button class="btn primary" type="button" onclick='openModal(${JSON.stringify(company.id)})'>查看企业详情</button>
             </div>
           </div>
